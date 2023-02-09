@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 let days = ['Mon', 'Tue', 'Wed', "Thu", "Fri"];
 let s = [
     [
@@ -38,7 +39,9 @@ let s = [
     ]
 ]
 console.log(s[0][1].class);
-
+function callAlert(){
+    alert('eork')
+}
 const Timetable = () =>{
     return(
         <div id="timetable">
@@ -46,12 +49,15 @@ const Timetable = () =>{
                 <table >
                     <thead>
                         <tr>
-                            {days.map((e, i)=><th key={i}>{e}</th>)}
+                            {days.map((e, i)=>{return <th key={i}>{e}</th>})}
                         </tr>
                     </thead>
                    <tbody>
-                       {s.map((e,i)=><tr key={i}>{e.map((e,i)=><td key={i}><h4>{e.class}</h4><p>{e.classroom}</p></td>)}</tr>)}
-                    
+                       {s.map((e,i)=><tr key={i}>{e.map((e,k)=>{
+                           let link = 'date='+ String(i) + String(k)+ '&className=' + e.class + '&room=' + e.classroom;
+                           //console.log(url);
+                           let url = '/edit?' + link;
+                           return <td key={k}><Link to={url} id="link-box"><h4>{e.class}</h4><p>{e.classroom}</p></Link></td>})}</tr>)}
                    </tbody> 
                 </table>
             </div>   
