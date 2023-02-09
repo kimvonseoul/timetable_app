@@ -14,7 +14,6 @@ const EditModal = () => {
     const d = date[0]
     const dates = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
     const dateTime = dates[date[1]];
-    //console.log(dateTime);
     const period = Number(date[0]) + 1;
     return (
         <div id="modal">
