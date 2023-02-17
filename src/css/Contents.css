@@ -1,0 +1,10 @@
+#contents {
+    display: flex;
+    width: 960px;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 100px;
+    background-color: gray;
+    border-radius: 30px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
