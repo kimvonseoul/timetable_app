@@ -59,24 +59,27 @@ const initialState = {
 
 export default function class_reducer(state=initialState, action:any) {
     const classes = state.classes;
+    const data = action.data;
     switch(action.type){
         case Class_save:
-            const data = action.data;
             const day = data.dateID;
             const t = data.period;
             const c = data.className;
             const r = data.classroom;
             classes[t][day].class = c;
             classes[t][day].classroom = r;
-            return {...state};
+            return state;
         case Class_delete:
-            const del_day = action.data.dateID;
-            const del_t = action.data.period;
-            classes[del_t][del_day].class = ' ';
-            classes[del_t][del_day].classroom = ' ';
+            const delete_data = action.data
+            const del_day = delete_data.dateID;
+            const del_t = delete_data.period;
+            if((del_day != undefined)&&(del_t != undefined)){
+                classes[del_t][del_day].class = ' ';
+                classes[del_t][del_day].classroom = ' ';
+            }
             return {...state};
         case Class_list:
-            return {...state};
+            return state;
         default: 
             return state;
     }
