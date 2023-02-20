@@ -1,6 +1,6 @@
 import { stringify } from 'querystring';
 import React, { useState } from 'react';
-import { Link, redirect, useParams, useSearchParams, useNavigate } from 'react-router-dom';
+import { Link, useSearchParams, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { class_save, class_delete } from './reducers/class_reducer';
 

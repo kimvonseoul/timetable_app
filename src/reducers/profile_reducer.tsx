@@ -26,9 +26,159 @@ export const recom_add = (data:any) => ({
 const initialState = {
     endId: 1,
     profiles: [
+        {id:0, name:'kim', username:'kimvonseoul', classes: [
+            [
+                {id:1, class:'math', classroom: '410'},
+                {id:2, class:'', classroom: ''},
+                {id:3, class:'music', classroom: '520'},
+                {id:4, class:'', classroom: ''},
+                {id:5, class:'PE', classroom: 'Gym'}
+            ],
+            [
+                {id:1, class:'', classroom: ''},
+                {id:2, class:'English', classroom: '220'},
+                {id:3, class:'', classroom: ''},
+                {id:4, class:'', classroom: ''},
+                {id:5, class:'Math', classroom: '310'}
+            ],
+            [
+                {id:1, class:'', classroom: ''},
+                {id:2, class:'', classroom: ''},
+                {id:3, class:'Art', classroom: '350'},
+                {id:4, class:'', classroom: ''},
+                {id:5, class:'', classroom: ''}
+            ],
+            [
+                {id:1, class:'', classroom: ''},
+                {id:2, class:'', classroom: ''},
+                {id:3, class:'', classroom: ''},
+                {id:4, class:'', classroom: ''},
+                {id:5, class:'', classroom: ''}
+            ],
+            [
+                {id:1, class:'', classroom: ''},
+                {id:2, class:'', classroom: ''},
+                {id:3, class:'', classroom: ''},
+                {id:4, class:'', classroom: ''},
+                {id:5, class:'', classroom: ''}
+            ]
+        ]},
+        {id:1, name:'sophia', username:'sophia', classes: [
+            [
+                {id:1, class:'math', classroom: '410'},
+                {id:2, class:'Enlgish', classroom: '120'},
+                {id:3, class:'music', classroom: '520'},
+                {id:4, class:'English', classroom: '240'},
+                {id:5, class:'PE', classroom: 'Gym'}
+            ],
+            [
+                {id:1, class:'', classroom: ''},
+                {id:2, class:'English', classroom: '220'},
+                {id:3, class:'', classroom: ''},
+                {id:4, class:'', classroom: ''},
+                {id:5, class:'Math', classroom: '310'}
+            ],
+            [
+                {id:1, class:'', classroom: ''},
+                {id:2, class:'', classroom: ''},
+                {id:3, class:'Art', classroom: '350'},
+                {id:4, class:'', classroom: ''},
+                {id:5, class:'', classroom: ''}
+            ],
+            [
+                {id:1, class:'', classroom: ''},
+                {id:2, class:'', classroom: ''},
+                {id:3, class:'', classroom: ''},
+                {id:4, class:'', classroom: ''},
+                {id:5, class:'', classroom: ''}
+            ],
+            [
+                {id:1, class:'', classroom: ''},
+                {id:2, class:'', classroom: ''},
+                {id:3, class:'', classroom: ''},
+                {id:4, class:'', classroom: ''},
+                {id:5, class:'', classroom: ''}
+            ]
+        ]},
+        {id:3, name:'Jason', username:'jason_', classes: [
+            [
+                {id:1, class:'math', classroom: '410'},
+                {id:2, class:'Enlgish', classroom: '120'},
+                {id:3, class:'music', classroom: '520'},
+                {id:4, class:'English', classroom: '240'},
+                {id:5, class:'PE', classroom: 'Gym'}
+            ],
+            [
+                {id:1, class:'', classroom: ''},
+                {id:2, class:'English', classroom: '220'},
+                {id:3, class:'', classroom: ''},
+                {id:4, class:'', classroom: ''},
+                {id:5, class:'Math', classroom: '310'}
+            ],
+            [
+                {id:1, class:'', classroom: ''},
+                {id:2, class:'', classroom: ''},
+                {id:3, class:'Art', classroom: '350'},
+                {id:4, class:'', classroom: ''},
+                {id:5, class:'', classroom: ''}
+            ],
+            [
+                {id:1, class:'', classroom: ''},
+                {id:2, class:'', classroom: ''},
+                {id:3, class:'', classroom: ''},
+                {id:4, class:'', classroom: ''},
+                {id:5, class:'', classroom: ''}
+            ],
+            [
+                {id:1, class:'', classroom: ''},
+                {id:2, class:'', classroom: ''},
+                {id:3, class:'', classroom: ''},
+                {id:4, class:'', classroom: ''},
+                {id:5, class:'', classroom: ''}
+            ]
+        ]},
+        {id:4, name:'cat', username:'cat_', classes: [
+            [
+                {id:1, class:'math', classroom: '410'},
+                {id:2, class:'Enlgish', classroom: '120'},
+                {id:3, class:'music', classroom: '520'},
+                {id:4, class:'English', classroom: '240'},
+                {id:5, class:'PE', classroom: 'Gym'}
+            ],
+            [
+                {id:1, class:'', classroom: ''},
+                {id:2, class:'English', classroom: '220'},
+                {id:3, class:'', classroom: ''},
+                {id:4, class:'', classroom: ''},
+                {id:5, class:'Math', classroom: '310'}
+            ],
+            [
+                {id:1, class:'', classroom: ''},
+                {id:2, class:'', classroom: ''},
+                {id:3, class:'Art', classroom: '350'},
+                {id:4, class:'', classroom: ''},
+                {id:5, class:'', classroom: ''}
+            ],
+            [
+                {id:1, class:'', classroom: ''},
+                {id:2, class:'', classroom: ''},
+                {id:3, class:'', classroom: ''},
+                {id:4, class:'', classroom: ''},
+                {id:5, class:'', classroom: ''}
+            ],
+            [
+                {id:1, class:'', classroom: ''},
+                {id:2, class:'', classroom: ''},
+                {id:3, class:'', classroom: ''},
+                {id:4, class:'', classroom: ''},
+                {id:5, class:'', classroom: ''}
+            ]
+        ]},
+
+    ],
+    followings: [
         {id:0, name:'kim', username:'kimvonseoul'},
         {id:1, name:'sophia', username:'sophia'},
-
     ],
     recommend: [
         {id:0, name:'Jason', username:'jason_'},
@@ -39,26 +189,19 @@ const initialState = {
 
 export default function profile_reducer(state=initialState, action:any){
     const profiles = state.profiles;
+    const followings = state.followings;
     const id = state.endId;
     switch(action.type){
-        case Prof_add:
-            const data = action.data;
-            state.endId++;
-            const name = data.id;
-            const username = data.username;
-            const newData = {id:id, name:name, username: username}
-            profiles.concat(newData);
-            return {...state}
         case Prof_delete:
-            const newProfiles = profiles.filter(profile => profile.id !== action.data.id);
-            state.profiles = newProfiles;
+            const newList = followings.filter(profile => profile.id !== action.data.id);
+            state.followings = newList;
             return state
         case Prof_list:
             return state;
         case Recom_add:
             state.endId++;
-            const recomAddedData = state.profiles.concat({id:state.endId, name:action.data.name, username:action.data.username});
-            state.profiles = recomAddedData;
+            const recomAddedData = state.followings.concat({id:state.endId, name:action.data.name, username:action.data.username});
+            state.followings = recomAddedData;
             const newRecom = state.recommend.filter(e => e.id !== action.data.id);
             state.recommend = newRecom;
             return {...state};
