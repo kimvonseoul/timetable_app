@@ -26,7 +26,7 @@ export const recom_add = (data:any) => ({
 const initialState = {
     endId: 1,
     profiles: [
-        {id:0, name:'kim', username:'kimvonseoul', classes: [
+        {id:0, name:'kim', username:'kimvonseoul', isFollowing: true, classes: [
             [
                 {id:1, class:'math', classroom: '410'},
                 {id:2, class:'', classroom: ''},
@@ -63,44 +63,7 @@ const initialState = {
                 {id:5, class:'', classroom: ''}
             ]
         ]},
-        {id:1, name:'sophia', username:'sophia', classes: [
-            [
-                {id:1, class:'math', classroom: '410'},
-                {id:2, class:'Enlgish', classroom: '120'},
-                {id:3, class:'music', classroom: '520'},
-                {id:4, class:'English', classroom: '240'},
-                {id:5, class:'PE', classroom: 'Gym'}
-            ],
-            [
-                {id:1, class:'', classroom: ''},
-                {id:2, class:'English', classroom: '220'},
-                {id:3, class:'', classroom: ''},
-                {id:4, class:'', classroom: ''},
-                {id:5, class:'Math', classroom: '310'}
-            ],
-            [
-                {id:1, class:'', classroom: ''},
-                {id:2, class:'', classroom: ''},
-                {id:3, class:'Art', classroom: '350'},
-                {id:4, class:'', classroom: ''},
-                {id:5, class:'', classroom: ''}
-            ],
-            [
-                {id:1, class:'', classroom: ''},
-                {id:2, class:'', classroom: ''},
-                {id:3, class:'', classroom: ''},
-                {id:4, class:'', classroom: ''},
-                {id:5, class:'', classroom: ''}
-            ],
-            [
-                {id:1, class:'', classroom: ''},
-                {id:2, class:'', classroom: ''},
-                {id:3, class:'', classroom: ''},
-                {id:4, class:'', classroom: ''},
-                {id:5, class:'', classroom: ''}
-            ]
-        ]},
-        {id:3, name:'Jason', username:'jason_', classes: [
+        {id:1, name:'sophia', username:'sophia', isFollowing: true,  classes: [
             [
                 {id:1, class:'math', classroom: '410'},
                 {id:2, class:'Enlgish', classroom: '120'},
@@ -137,7 +100,44 @@ const initialState = {
                 {id:5, class:'', classroom: ''}
             ]
         ]},
-        {id:4, name:'cat', username:'cat_', classes: [
+        {id:3, name:'Jason', username:'jason_kitamura', isFollowing: false,  classes: [
+            [
+                {id:1, class:'math', classroom: '410'},
+                {id:2, class:'Enlgish', classroom: '120'},
+                {id:3, class:'music', classroom: '520'},
+                {id:4, class:'English', classroom: '240'},
+                {id:5, class:'PE', classroom: 'Gym'}
+            ],
+            [
+                {id:1, class:'', classroom: ''},
+                {id:2, class:'English', classroom: '220'},
+                {id:3, class:'', classroom: ''},
+                {id:4, class:'', classroom: ''},
+                {id:5, class:'Math', classroom: '310'}
+            ],
+            [
+                {id:1, class:'', classroom: ''},
+                {id:2, class:'', classroom: ''},
+                {id:3, class:'Art', classroom: '350'},
+                {id:4, class:'', classroom: ''},
+                {id:5, class:'', classroom: ''}
+            ],
+            [
+                {id:1, class:'', classroom: ''},
+                {id:2, class:'', classroom: ''},
+                {id:3, class:'', classroom: ''},
+                {id:4, class:'', classroom: ''},
+                {id:5, class:'', classroom: ''}
+            ],
+            [
+                {id:1, class:'', classroom: ''},
+                {id:2, class:'', classroom: ''},
+                {id:3, class:'', classroom: ''},
+                {id:4, class:'', classroom: ''},
+                {id:5, class:'', classroom: ''}
+            ]
+        ]},
+        {id:4, name:'cat', username:'cat_lover', isFollowing: false,  classes: [
             [
                 {id:1, class:'math', classroom: '410'},
                 {id:2, class:'Enlgish', classroom: '120'},
@@ -181,8 +181,8 @@ const initialState = {
         {id:1, name:'sophia', username:'sophia'},
     ],
     recommend: [
-        {id:0, name:'Jason', username:'jason_'},
-        {id:1, name:'cat', username:'cat_'},
+        {id:0, name:'Jason', username:'jason_kitamura'},
+        {id:1, name:'cat', username:'cat_lover'},
         
     ]
 }

@@ -5,6 +5,10 @@ body {
   padding: 0;
   background-color: rgb(228, 228, 228);
 }
+a {
+  color: #000;
+  text-decoration: none;
+}
 #timetable {
   width: 60%;
   height: 100%;
@@ -33,12 +37,19 @@ body {
   border-radius: 15px;
   background-color: rgb(235, 235, 235);
 }
+.table td:hover {
+  background-color: black;
+}
+.table td:hover h4, .table td:hover p {
+  color: white;
+}
 .table h4{
   margin-bottom: 0;
 }
 .table p {
   margin-top: 5px;
 }
+
 .table a {
   display: inline-block;
   width: 100%;

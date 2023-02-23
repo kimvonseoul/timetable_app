@@ -11,10 +11,8 @@ const ProfTable = (props: any) => {
     const username = searchParams.get('username');
     const name = searchParams.get('name');
     const reducerData = props.state.profile_reducer;
-    console.log(reducerData.profiles[0].username);
     function classData() {
         for(var item of reducerData.profiles){
-            console.log(item);
             if(item.username == username){
                 return item.classes;
             }

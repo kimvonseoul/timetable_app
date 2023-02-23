@@ -1,14 +1,31 @@
+#profiles a{
+    color: rgb(129, 129, 129);
+    display: inline-block;
+    margin-left: 10px;
+}
+#profiles p {
+    display: inline-block;
+}
 #prof_header {
-    margin: 15px;
+    margin-top: 15px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 #prof_header h2 {
     display: inline-block;
+    padding-top: 10px;
+}
+
+.header_btn {
     padding: 10px;
 }
-.header_btn {
-    display: inline-block;
-    padding: 10px;
+.profile_add_btn, .unfollow_btn{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    margin: 10px;
+    height: 25px;
+    border: none;
+    border-radius: 10px;
 }
